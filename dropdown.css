@@ -1,0 +1,98 @@
+body {
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(to top, #b399ff, #e6cfe6);
+}
+
+.dropdown_container {
+    display: none;
+}
+
+.title {
+    text-align: center;
+    margin-top: 96px;
+    font-size: 50px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: #ffffff;
+}
+
+/* checkbox */
+
+/* 讓元素不要換行 */
+
+.dropdown {
+    /*  置中 */
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dropdown:hover {
+    top: 31%;
+}
+
+.dropdown .item {
+    width: 320px;
+    height: 60px;
+
+    border: 1px solid (#595959, 0.6);
+    margin: -1px 0px 0px 0px; /* 邊線貼一起 */
+    padding: 0px 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 3px #ccc;
+    background: #fff;
+}
+
+.dropdown .item:first-child {
+    border-radius: 10px 10px 10px 10px;
+    margin: 0px 0px 20px 0px;
+}
+
+.dropdown .item:nth-child(2) {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.dropdown .item:last-child {
+    border-radius: 0px 0px 10px 10px;
+}
+
+/* 先把第二個.item藏起來 */
+.dropdown .item + .item {
+    display: none;
+}
+
+/* hover時顯示 */
+.dropdown:hover .item {
+    display: block;
+}
+
+/* 垂直置中 */
+.dropdown .text label,
+.dropdown .item span,
+.dropdown .item input[type='checkbox'] {
+    position: relative;
+    line-height: 10%;
+    font-size: 24px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 10px auto;
+}
+
+.dropdown .text label {
+    height: 60px;
+    top: 20%;
+    transform: translate(-50%, -50%);
+}
+
+/* 讓label為空的時候顯示文字 */
+.dropdown .text label:empty:after {
+    content: 'Please Select...';
+    color: #ccc;
+    font-size: 25px;
+    text-align: center;
+    padding: 12px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    width: 300px;
+    position: absolute;
+    padding: 16px 10px 4px 10px;
+}
