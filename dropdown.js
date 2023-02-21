@@ -60,6 +60,8 @@ function clickItem(){
        // TODO label顯示勾選項目
       document.querySelector('.dropdown .text label').innerText = clickedItems    
       //找原本的ListBox value相等的元素，同時做勾選或取消
+      // DOM   selected 屬性可設置或返回選項的 selected 屬性的布林值。
+      // .checked 來設置或返回是否應被選中
       document.querySelector('.dropdown_container option[value="'+e.target.value+'"]').selected = e.target.checked
                
             })
