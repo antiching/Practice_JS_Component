@@ -4,9 +4,9 @@ body {
     background-image: linear-gradient(to top, #b399ff, #e6cfe6);
 }
 
-/* .dropdown_container {
+.dropdown_container {
     display: none;
-} */
+}
 
 .title {
     text-align: center;
